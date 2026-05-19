@@ -5,7 +5,7 @@ hide: true
 show_reading_time: false
 ---
 
-Hi! My name is [Your Full Name]
+Hi! My name is Rigved Reddy Gaddam
 
 ### Development Environment
 
@@ -83,3 +83,22 @@ Hi! My name is [Your Full Name]
 </div>
 
 <br>
+
+### CS 111 Final Portfolio
+
+> Here are my items for the CS 111 final project, showng my growth and mastery of the various computer science concepts taught.
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <a href="{{site.baseurl}}/snake" class="btn">
+        Snake
+    </a>
+    <a href="{{site.baseurl}}/gamify/parallax" class="btn" style="background-color: var(--green); ">
+        Fish
+    </a>
+    <a href="{{site.baseurl}}/gamify" class="btn" style="background-color: var(--teal);">
+       Gamify
+    </a>
+    <a href="{{site.baseurl}}/cs-pathway" class="btn" style="background-color: var(--orange);">
+       CS Pathway
+    </a>
+</div>
