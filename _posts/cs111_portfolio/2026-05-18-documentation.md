@@ -2,6 +2,8 @@
 layout: post
 title: Documentation
 description: Writing clear documentation and comments to explain code
+codemirror: true
+permalink: /doc
 ---
 
 # Documentation

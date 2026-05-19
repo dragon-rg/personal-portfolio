@@ -2,6 +2,8 @@
 layout: post
 title: Input/Output (I/O)
 description: Handling user input and program output
+codemirror: true
+permalink: /IO
 ---
 
 # Input/Output (I/O)

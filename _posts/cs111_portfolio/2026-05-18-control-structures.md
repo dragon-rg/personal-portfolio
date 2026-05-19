@@ -2,6 +2,8 @@
 layout: post
 title: Control Structures
 description: Mastery of conditionals, loops, and program flow control
+codemirror: true
+permalink: /control-structures
 ---
 
 # Control Structures

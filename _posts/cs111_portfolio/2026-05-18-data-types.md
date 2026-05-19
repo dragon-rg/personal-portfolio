@@ -2,6 +2,8 @@
 layout: post
 title: Data Types
 description: Understanding and working with different data types and data structures
+codemirror: true
+permalink: /data-types
 ---
 
 # Data Types

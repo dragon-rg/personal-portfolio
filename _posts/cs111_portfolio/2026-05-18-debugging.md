@@ -2,6 +2,8 @@
 layout: post
 title: Debugging
 description: Identifying, diagnosing, and fixing errors in code
+codemirror: true
+permalink: /debug
 ---
 
 # Debugging

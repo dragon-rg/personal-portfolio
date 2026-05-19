@@ -2,6 +2,8 @@
 layout: post
 title: Testing and Verification
 description: Verifying code correctness through testing and quality assurance
+codemirror: true
+permalink: /testing
 ---
 
 # Testing and Verification

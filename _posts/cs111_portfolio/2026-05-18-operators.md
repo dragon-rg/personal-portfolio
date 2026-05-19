@@ -2,6 +2,8 @@
 layout: post
 title: Operators
 description: Understanding and applying various operators for computation and logic
+codemirror: true
+permalink: /operators
 ---
 
 # Operators
