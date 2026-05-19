@@ -6,98 +6,87 @@ codemirror: true
 permalink: /data-types
 ---
 
-# Data Types
 
-## Overview
-This objective demonstrates proficiency in working with various data types, understanding their properties, and choosing appropriate types for different scenarios.
 
----
+## Numbers
 
-## Sub-Deliverables
+Numbers represent quantities and measurements used in calculations and comparisons.
 
-### 1. Primitive Data Types
-- **Description**: Work with fundamental data types in the language
-- **Key Concepts**:
-  - Numbers (integers, floats, decimals)
-  - Strings and string operations
-  - Booleans and truthiness
-  - Null and undefined
-  - Type checking and conversion
-- **Example**: Store and manipulate different primitive types
+{% capture numbers_example %}
+let num1 = 16
+let num2 = 42
 
-### 2. Arrays
-- **Description**: Use arrays to store and manage collections of data
-- **Key Concepts**:
-  - Array creation and initialization
-  - Indexing and accessing elements
-  - Array methods (push, pop, slice, splice, etc.)
-  - Iterating through arrays
-  - Multi-dimensional arrays
-- **Example**: Store list of scores and calculate average
+console.log(num1 + num2); // 58
+{% endcapture %}
+{% include runners/code.html runner_id="js-numbers" language="javascript" code=numbers_example %}
 
-### 3. Objects/Dictionaries
-- **Description**: Use objects to store key-value pairs and structured data
-- **Key Concepts**:
-  - Object creation and properties
-  - Accessing properties (dot notation and bracket notation)
-  - Adding/removing properties
-  - Object methods
-  - Nested objects
-- **Example**: Store student information with multiple properties
+## Strings
 
-### 4. Data Type Conversion
-- **Description**: Convert between different data types
-- **Key Concepts**:
-  - Implicit type coercion
-  - Explicit casting/conversion
-  - String to number conversion
-  - Number to string conversion
-  - Boolean conversion
-- **Example**: Parse user input and convert to appropriate type
+Strings store text data and can be combined and separated.
 
-### 5. Collections and Iteration
-- **Description**: Work with collections of data efficiently
-- **Key Concepts**:
-  - `for...of` loops
-  - `forEach` method
-  - `map`, `filter`, `reduce` methods
-  - Spread operator
-  - List comprehensions
-- **Example**: Transform and filter data from arrays
+{% capture strings_example %}
+let str1 = "Apples";
+let str2 = "Bananas";
 
-### 6. Complex Data Structures
-- **Description**: Combine data types to create more complex structures
-- **Key Concepts**:
-  - Arrays of objects
-  - Objects containing arrays
-  - Nested structures
-  - Data organization patterns
-- **Example**: Array of student objects with multiple properties
+//first string
+console.log(str2); // "Bananas"
 
-### 7. Type Safety and Validation
-- **Description**: Ensure data integrity and prevent type-related errors
-- **Key Concepts**:
-  - Type checking (`typeof`, `instanceof`)
-  - Validation functions
-  - Error handling for type mismatches
-  - Default values
-- **Example**: Validate input before processing
+//concatenation
+console.log(str1 + " and " + str2); // "Apples and Bananas"
 
-### 8. Memory and Performance
-- **Description**: Understand how data types affect memory and performance
-- **Key Concepts**:
-  - Reference vs. value types
-  - Shallow vs. deep copies
-  - Memory efficiency
-  - Performance implications
-- **Example**: Manage large collections efficiently
+//slicing
+console.log(str1.slice(0, 3)); // "App"
+{% endcapture %}
+{% include runners/code.html runner_id="js-strings" language="javascript" code=strings_example %}
 
----
+## Booleans
 
-## Evaluation Criteria
-- [ ] Appropriate data types chosen for each use case
-- [ ] Arrays and objects used correctly
-- [ ] Type conversions handled properly
-- [ ] Collections manipulated efficiently
-- [ ] Complex nested structures work as intended
-- [ ] Data integrity maintained throughout program
+Booleans represent true/false values and can be used with logical operators and conditionals.
+
+{% capture booleans_example %}
+let atDestination = false;
+let aboveSpeedLimit = true;
+
+if (atDestination) {
+    console.log("At destination, stop the vehicle.");
+} else if (aboveSpeedLimit) {
+    console.log("Above speed limit, slow down.");
+} else {
+    console.log("Below speed limit, can speed up.");
+}
+
+// will print the else if statement since aboveSpeedLimit is true
+{% endcapture %}
+{% include runners/code.html runner_id="js-booleans" language="javascript" code=booleans_example %}
+
+## Arrays
+
+Arrays store collections of data that can be accessed and manipulated.
+
+{% capture arrays_example %}
+let fruits = ["apple", "banana", "orange"];
+let numbers = [10, 20, 30, 40];
+
+fruits.push("grape");
+console.log(fruits);
+console.log(numbers[0]);
+console.log(numbers.length);
+{% endcapture %}
+{% include runners/code.html runner_id="js-arrays" language="javascript" code=arrays_example %}
+
+## Objects
+
+Objects store related data as key-value pairs and organize complex information.
+
+{% capture objects_example %}
+let user = {
+    name: "Alice",
+    age: 25,
+    email: "alice@example.com"
+};
+
+console.log("Username: " + user.name);
+console.log("JSON format: " + JSON.stringify(user));
+console.log("Parsed into javascript object: " + JSON.parse(JSON.stringify(user)).name);
+{% endcapture %}
+{% include runners/code.html runner_id="js-objects" language="javascript" code=objects_example %}
