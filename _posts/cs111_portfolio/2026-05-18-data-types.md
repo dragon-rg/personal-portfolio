@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Types
-description: Understanding and working with different data types and data structures
+description: Data types in the JavaScript language
 codemirror: true
 permalink: /data-types
 ---
