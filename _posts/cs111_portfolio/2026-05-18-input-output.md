@@ -6,103 +6,55 @@ codemirror: true
 permalink: /IO
 ---
 
-# Input/Output (I/O)
+## Keyboard Input and Canvas Rendering 
 
-## Overview
-This objective demonstrates proficiency in receiving user input and displaying output to create interactive programs.
+All of our levels contain event listeners for keyboard input, allowing us to move our players with WASD or arrow keys. Each of oour levels also uses the Canvas API to draw sprites, backgrounds, and platforms, as each game object has a `draw()`method that is called in the main game loop to render the game state on the canvas. This allows us to create visually engaging games while also providing responsive controls for the player.
 
----
+## GameEnv Configuration
 
-## Sub-Deliverables
+The `GameControl` class sets up the game world before anything else is done, configuring the environment for our level. By centralizing this configuration in the `GameControl` class, we ensure that all levels have a consistent setup and can easily be modified if needed.
 
-### 1. Console Output
-- **Description**: Display information to the console/terminal
-- **Key Concepts**:
-  - `console.log()`
-  - `console.error()`
-  - `console.warn()`
-  - `console.table()` and other console methods
-  - Formatted output
-  - Debugging output
-- **Example**: Print program results and debug information
+## API Integration
 
-### 2. Console Input
-- **Description**: Accept input from the console/terminal
-- **Key Concepts**:
-  - `prompt()` function
-  - `confirm()` for yes/no input
-  - Reading from stdin (in Node.js)
-  - Input parsing
-  - Error handling for invalid input
-- **Example**: Ask user for name and display greeting
+The leaderboard makes HTTP GET requests to recieve the score data from the backend.  
+```javascript
+fetch(`${javaURI}/api/events/SCORE_COUNTER`, fetchOptions)
+```
 
-### 3. HTML DOM Output
-- **Description**: Display output in web pages using DOM manipulation
-- **Key Concepts**:
-  - `document.getElementById()`
-  - `document.querySelector()`
-  - Setting `textContent` and `innerHTML`
-  - Creating new elements
-  - Appending to DOM
-- **Example**: Update webpage with calculation results
+The code also includes a `.catch()` block to handle any errors that may occur during the fetch operation, ensuring that any errors won't be ignored and the developer can get fedback as to what went wrong. 
 
-### 4. HTML Form Input
-- **Description**: Accept input from HTML forms
-- **Key Concepts**:
-  - Text inputs
-  - Buttons and event listeners
-  - Getting form values
-  - Form submission handling
-  - Input validation
-- **Example**: Login form or data entry interface
+```javascript
+.catch(err => {
+    console.error('Error fetching dynamic leaderboard:', err);
+    // Check for authentication errors (401 or 403 status)
+    if (err.message && (err.message.includes('401') || err.message.includes('403'))) {
+        list.innerHTML = `<p class="error">Please login to access this feature.</p>`;
+    } else {
+        list.innerHTML = `<p class="error">Failed to load leaderboard</p>`;
+    }
+});
+```
 
-### 5. Input Validation
-- **Description**: Validate and handle user input properly
-- **Key Concepts**:
-  - Checking for empty input
-  - Type validation
-  - Range validation
-  - Pattern matching
-  - Error messages
-- **Example**: Ensure valid email or age input
+## Asynchronous IO
 
-### 6. Input Parsing and Processing
-- **Description**: Convert and process raw input into usable data
-- **Key Concepts**:
-  - String parsing
-  - Type conversion
-  - Trimming whitespace
-  - Case handling
-  - Splitting and joining strings
-- **Example**: Parse comma-separated values or structured input
+The leaderboard uses `.then()` chaining to handle responses sequentially by checking if the status is okay, then parsing the JSON data, and finally displaying the leaderboard with the retrieved data. 
 
-### 7. File Input/Output
-- **Description**: Read from and write to files (in backend environments)
-- **Key Concepts**:
-  - Reading file contents
-  - Writing to files
-  - Appending to files
-  - File paths
-  - Error handling
-- **Example**: Save game progress to file
+```javascript
+fetch(`${javaURI}/api/events/SCORE_COUNTER`, fetchOptions)
+.then(res => {
+    if (!res.ok) throw new Error(`HTTP ${res.status}: ${res.statusText}`);
+    return res.json();
+})
+.then(data => {
+    this.displayLeaderboard(data);
+})
+```
 
-### 8. Event-Driven Input
-- **Description**: Handle input through event listeners
-- **Key Concepts**:
-  - Click events
-  - Keyboard events
-  - Input change events
-  - Event listeners and handlers
-  - Event delegation
-- **Example**: Respond to button clicks or keyboard input
+## JSON Parsing
 
----
+JSON Parsing converts stored data back into JavaScript objects using `JSON.parse()`:
+```javascript
+const stored = JSON.parse(localStorage.getItem(storageKey) || '[]');
+```
 
-## Evaluation Criteria
-- [ ] Console output displays information clearly
-- [ ] User input is properly captured
-- [ ] DOM manipulation works correctly
-- [ ] Form handling functions properly
-- [ ] Input validation prevents errors
-- [ ] Error messages are helpful and clear
-- [ ] Program handles invalid input gracefully
+This allows the code to read the storage keys(which were previously in JSON string format) as an object literal. The code later uses JSON.stringify() to convert the JavaScript object back into a JSON string for storage.
