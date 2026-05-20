@@ -13,6 +13,7 @@
 games/cs-pathway:dev
 games/gamify:dev
 games/collisions-mechanic:dev
+games/local-storage:dev
 
 # Systems
 #systems/student-management-groups
