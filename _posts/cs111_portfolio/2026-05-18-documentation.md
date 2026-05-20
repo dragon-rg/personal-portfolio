@@ -6,108 +6,41 @@ codemirror: true
 permalink: /doc
 ---
 
-# Documentation
+## Code Comments/JSDocs
 
-## Overview
-This objective demonstrates proficiency in writing clear, comprehensive documentation that helps others (and future self) understand code functionality and usage.
+In my `Guard.js` and `HorizontalGuard.js` asset files, I made sure to include comments and JSDocs to explain the purpose of the methods I overrode in the respective classes. This make it easy for other developers and my future self to understand the purpose of the code later on, saving us more time. Example:
+```javascript
+/**
+ * stayWithinCanvas method ensures that the object stays within the boundaries of the canvas.
+ * With this override, we can also reverse the velocity whenever the guard hits the edges of the canvas.
+ */
+stayWithinCanvas() {
+    // Bottom of the canvas
+    if (this.position.y + this.height > this.gameEnv.innerHeight) {
+        this.position.y = this.gameEnv.innerHeight - this.height;
+        this.velocity.y *= -1; // Reverse vertical velocity to create a "bounce" effect
+        console.log(this.velocity.y);
+    }
+    // Top of the canvas
+    if (this.position.y < 0) {
+        this.position.y = 1;
+        this.velocity.y *= -1; // Reverse vertical velocity to create a "bounce" effects
+        console.log(this.velocity.y);
+    }
+    // Right of the canvas
+    if (this.position.x + this.width > this.gameEnv.innerWidth) {
+        this.position.x = this.gameEnv.innerWidth - this.width;
+        this.velocity.x = 0;
+    }
+    // Left of the canvas
+    if (this.position.x < 0) {
+        this.position.x = 0;
+        this.velocity.x = 0;
+    }
+}
+```
 
----
+## Mini Lesson
+I collaborated with my groups to create multiple mini lessons in a comic/visual style to explain Data Abstraction, Collision Mechanics, and Local Storage to my peers.
 
-## Sub-Deliverables
-
-### 1. Code Comments
-- **Description**: Add inline comments to explain code logic
-- **Key Concepts**:
-  - Single-line comments (`//`)
-  - Multi-line comments (`/* */`)
-  - Commenting complex logic
-  - Commenting assumptions and edge cases
-  - Avoiding obvious comments
-  - Commenting out code (sparingly)
-- **Example**: Explain algorithm steps or non-obvious solutions
-
-### 2. Function/Method Documentation
-- **Description**: Document functions with clear descriptions
-- **Key Concepts**:
-  - Function purpose and behavior
-  - Parameter descriptions
-  - Return value documentation
-  - JSDoc format
-  - Example usage
-  - Known limitations
-- **Example**: Document custom function with parameters and return value
-
-### 3. Class Documentation
-- **Description**: Document classes and their interfaces
-- **Key Concepts**:
-  - Class purpose and responsibilities
-  - Constructor parameters
-  - Property descriptions
-  - Method documentation
-  - Usage examples
-  - Class relationships
-- **Example**: Document a `Player` class with all public methods
-
-### 4. README and Setup Documentation
-- **Description**: Create comprehensive README files for projects
-- **Key Concepts**:
-  - Project overview
-  - Installation instructions
-  - Usage examples
-  - File structure explanation
-  - Dependencies list
-  - Troubleshooting guide
-- **Example**: Complete README for a game or application
-
-### 5. API Documentation
-- **Description**: Document public interfaces and APIs
-- **Key Concepts**:
-  - Function signatures
-  - Parameter types and descriptions
-  - Return types
-  - Exception handling
-  - Usage examples
-  - Deprecation notices
-- **Example**: Document exported functions and classes
-
-### 6. Code Examples and Tutorials
-- **Description**: Provide clear examples demonstrating usage
-- **Key Concepts**:
-  - Working code examples
-  - Step-by-step tutorials
-  - Common use cases
-  - Best practices
-  - Anti-patterns to avoid
-- **Example**: Tutorial showing how to use a library or framework
-
-### 7. Architecture and Design Documentation
-- **Description**: Document overall structure and design decisions
-- **Key Concepts**:
-  - System architecture diagrams
-  - Design pattern explanations
-  - Module relationships
-  - Data flow diagrams
-  - Technology choices and rationale
-- **Example**: Explain overall application structure
-
-### 8. Maintenance and Update Documentation
-- **Description**: Document changes and maintain version history
-- **Key Concepts**:
-  - Changelog entries
-  - Version tracking
-  - Migration guides
-  - Breaking changes documentation
-  - Future development notes
-- **Example**: Document what changed between versions
-
----
-
-## Evaluation Criteria
-- [ ] Code includes helpful comments
-- [ ] Functions are documented with purpose and parameters
-- [ ] Classes have clear documentation
-- [ ] README provides clear project overview
-- [ ] API is well-documented for users
-- [ ] Examples are provided for complex features
-- [ ] Documentation is clear and easy to understand
-- [ ] Documentation is kept up-to-date with code
+| [data abstraction]({{site.baseurl}}/js/data-abstraction) | [collision mechanics]({{site.baseurl}}/collision-mechanics) | [local storage]({{site.baseurl}}/local-storage) | 
