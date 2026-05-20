@@ -89,16 +89,22 @@ Hi! My name is Rigved Reddy Gaddam
 > Here are my items for the CS 111 final project, showng my growth and mastery of the various computer science concepts taught.
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-    <a href="{{site.baseurl}}/snake" class="btn">
-        Snake
+    <a href="{{site.baseurl}}/control-structures" class="btn">
+        Control Structures
     </a>
-    <a href="{{site.baseurl}}/gamify/parallax" class="btn" style="background-color: var(--green); ">
-        Fish
+    <a href="{{site.baseurl}}/data-types" class="btn" style="background-color: var(--green); ">
+        Data Types
     </a>
-    <a href="{{site.baseurl}}/gamify" class="btn" style="background-color: var(--teal);">
-       Gamify
+    <a href="{{site.baseurl}}/doc" class="btn" style="background-color: var(--orange);">
+        Documentation
     </a>
-    <a href="{{site.baseurl}}/cs-pathway" class="btn" style="background-color: var(--orange);">
-       CS Pathway
+    <a href="{{site.baseurl}}/IO" class="btn">
+        Input/Output
+    </a>
+    <a href="{{site.baseurl}}/oop" class="btn" style="background-color: var(--green); ">
+        OOP
+    </a>
+    <a href="{{site.baseurl}}/operators" class="btn" style="background-color: var(--teal);">
+        Operators
     </a>
 </div>
