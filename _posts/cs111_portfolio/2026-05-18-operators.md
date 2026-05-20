@@ -46,7 +46,7 @@ src: path + "/images/gamebuilder/sprites/astro.png",
 
 ## Boolean Expressions
 
-Boolean operators (&&, ||, !) combine conditions for complex logic. We used them in the `update()` method of our `Guard.js` assets.
+Boolean operators like `&&`, `||`, and `!` combine conditions for complex logic. We used them in the `update()` method of our `Guard.js` assets.
 
 ```javascript
 if (this.spriteData && typeof this.spriteData.update === 'function') {
