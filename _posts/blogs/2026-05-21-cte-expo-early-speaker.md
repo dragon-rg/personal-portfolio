@@ -4,6 +4,7 @@ title: "CTE Expo Early Speaker"
 description: "Extra credit event reflection"
 type: tangibles
 comments: true
+permalink: /cte-early-speaker
 ---
 
 # CTE Expo Early Speaker
@@ -16,9 +17,9 @@ comments: true
 
 ## Proof of Experience
 
-No image uploaded.
+![CTE Expo Early Speaker Event](/images/cte-early-speaker.jpeg)
 
-**Caption:**  
+With Elijah Johnson at the CTE Expo early speaker event  
 
 
 ## Before the Event
