@@ -89,28 +89,63 @@ Hi! My name is Rigved Reddy Gaddam
 > Here are my items for the CS 111 final project, showng my growth and mastery of the various computer science concepts taught.
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-    <a href="{{site.baseurl}}/oop" class="btn" style="background-color: var(--green); ">
-        OOP
+    <a href="{{site.baseurl}}/oop" style="text-decoration: none;">
+        <div style="background-color: var(--green); color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold; transition: transform 0.2s, box-shadow 0.2s;">
+            OOP
+        </div>
     </a>
-    <a href="{{site.baseurl}}/IO" class="btn">
-        Input/Output
+    <a href="{{site.baseurl}}/IO" style="text-decoration: none;">
+        <div style="background-color: var(--blue); color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold; transition: transform 0.2s, box-shadow 0.2s;">
+            Input/Output
+        </div>
     </a>
-    <a href="{{site.baseurl}}/control-structures" class="btn">
-        Control Structures
+    <a href="{{site.baseurl}}/control-structures" style="text-decoration: none;">
+        <div style="background-color: var(--teal); color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold; transition: transform 0.2s, box-shadow 0.2s;">
+            Control Structures
+        </div>
     </a>
-    <a href="{{site.baseurl}}/doc" class="btn" style="background-color: var(--orange);">
-        Documentation
+    <a href="{{site.baseurl}}/doc" style="text-decoration: none;">
+        <div style="background-color: var(--orange); color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold; transition: transform 0.2s, box-shadow 0.2s;">
+            Documentation
+        </div>
     </a>
-    <a href="{{site.baseurl}}/operators" class="btn" style="background-color: var(--teal);">
-        Operators
+    <a href="{{site.baseurl}}/operators" style="text-decoration: none;">
+        <div style="background-color: var(--teal); color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold; transition: transform 0.2s, box-shadow 0.2s;">
+            Operators
+        </div>
     </a>
-    <a href="{{site.baseurl}}/data-types" class="btn" style="background-color: var(--green); ">
-        Data Types
+    <a href="{{site.baseurl}}/data-types" style="text-decoration: none;">
+        <div style="background-color: var(--green); color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold; transition: transform 0.2s, box-shadow 0.2s;">
+            Data Types
+        </div>
     </a>
-    <a href="{{site.baseurl}}/debugging" class="btn" style="background-color: var(--blue); ">
-        Debugging
+    <a href="{{site.baseurl}}/debugging" style="text-decoration: none;">
+        <div style="background-color: var(--blue); color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold; transition: transform 0.2s, box-shadow 0.2s;">
+            Debugging
+        </div>
     </a>
-    <a href="{{site.baseurl}}/testing" class="btn" style="background-color: #8B4789; color: white;">
-        Testing
+    <a href="{{site.baseurl}}/testing" style="text-decoration: none;">
+        <div style="background-color: #8B4789; color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold; transition: transform 0.2s, box-shadow 0.2s;">
+            Testing
+        </div>
+    </a>
+</div>
+
+<br>
+
+### Blogs
+
+> Reflections and experiences from extracurricular events and presentations.
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <a href="{{site.baseurl}}/cte-expo" style="text-decoration: none;">
+        <div style="background-color: var(--orange); color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold; transition: transform 0.2s, box-shadow 0.2s;">
+            CTE Expo 2026
+        </div>
+    </a>
+    <a href="{{site.baseurl}}/cte-early-speaker" style="text-decoration: none;">
+        <div style="background-color: var(--orange); color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold; transition: transform 0.2s, box-shadow 0.2s;">
+            CTE Expo Early Speaker
+        </div>
     </a>
 </div>
