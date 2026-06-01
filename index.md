@@ -110,4 +110,7 @@ Hi! My name is Rigved Reddy Gaddam
     <a href="{{site.baseurl}}/debugging" class="btn" style="background-color: var(--blue); ">
         Debugging
     </a>
+    <a href="{{site.baseurl}}/testing" class="btn" style="background-color: #8B4789;">
+        Testing
+    </a>
 </div>
