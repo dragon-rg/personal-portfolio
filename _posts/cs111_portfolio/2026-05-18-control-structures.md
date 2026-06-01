@@ -6,6 +6,10 @@ codemirror: true
 permalink: /control-structures
 ---
 
+## Table of Contents
+- [Iteration](#iteration)
+- [Conditionals and Nested Conditions](#conditionals-and-nested-conditions)
+
 ## Iteration
 
 Our game engine uses loops for many tasks, one of which being checking for collisions in `Enemy.js`.

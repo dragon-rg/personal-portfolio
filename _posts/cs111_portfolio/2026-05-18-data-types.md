@@ -6,7 +6,12 @@ codemirror: true
 permalink: /data-types
 ---
 
-
+## Table of Contents
+- [Numbers](#numbers)
+- [Strings](#strings)
+- [Booleans](#booleans)
+- [Arrays](#arrays)
+- [Objects](#objects)
 
 ## Numbers
 

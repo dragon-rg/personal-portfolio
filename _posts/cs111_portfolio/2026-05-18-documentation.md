@@ -6,6 +6,10 @@ codemirror: true
 permalink: /doc
 ---
 
+## Table of Contents
+- [Code Comments/JSDocs](#code-commentsjsdocs)
+- [Mini Lesson](#mini-lesson)
+
 ## Code Comments/JSDocs
 
 In my `Guard.js` and `HorizontalGuard.js` asset files, I made sure to include comments and JSDocs to explain the purpose of the methods I overrode in the respective classes. This make it easy for other developers and my future self to understand the purpose of the code later on, saving us more time. Example:

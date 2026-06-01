@@ -6,6 +6,13 @@ codemirror: true
 permalink: /IO
 ---
 
+## Table of Contents
+- [Keyboard Input and Canvas Rendering](#keyboard-input-and-canvas-rendering)
+- [GameEnv Configuration](#gameenv-configuration)
+- [API Integration](#api-integration)
+- [Asynchronous IO](#asynchronous-io)
+- [JSON Parsing](#json-parsing)
+
 ## Keyboard Input and Canvas Rendering 
 
 All of our levels contain event listeners for keyboard input, allowing us to move our players with WASD or arrow keys. Each of oour levels also uses the Canvas API to draw sprites, backgrounds, and platforms, as each game object has a `draw()`method that is called in the main game loop to render the game state on the canvas. This allows us to create visually engaging games while also providing responsive controls for the player.

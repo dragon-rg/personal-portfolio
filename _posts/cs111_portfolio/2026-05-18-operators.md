@@ -6,6 +6,11 @@ codemirror: true
 permalink: /operators
 ---
 
+## Table of Contents
+- [Mathematical Operators](#mathematical-operators)
+- [String Operations](#string-operations)
+- [Boolean Expressions](#boolean-expressions)
+
 ## Mathematical Operators
 
 We use mathematical operators to update our gravity, velocity, and collision mechanic calculations in our assets(`Guard.js`).
