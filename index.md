@@ -107,4 +107,7 @@ Hi! My name is Rigved Reddy Gaddam
     <a href="{{site.baseurl}}/data-types" class="btn" style="background-color: var(--green); ">
         Data Types
     </a>
+    <a href="{{site.baseurl}}/debugging" class="btn" style="background-color: var(--blue); ">
+        Debugging
+    </a>
 </div>
