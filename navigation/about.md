@@ -99,7 +99,7 @@ Here is what I did at those places
 - moved to the U.S. when when I was around a year old
 - Residence switched from California to New York and finally back to California
 - Grade Schooling in California
-- Current student at Del Norte High School
+- Current student at Del Norte High School, co29
 
 ### Family, Hobbies, and Interests
 
