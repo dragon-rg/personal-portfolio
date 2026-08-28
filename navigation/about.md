@@ -112,7 +112,7 @@ I value my family very much, and I love to spend time with them. Some other hobb
     var container = document.getElementById("hobbies_container");
 
     var hobbiesAndInterests = [ //images sources for the various hobbies I have
-            {"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Tennis_Racket_and_Balls.jpg/640px-Tennis_Racket_and_Balls.jpg", 
+            {"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Tennis_Racket_and_Balls.jpg/960px-Tennis_Racket_and_Balls.jpg", 
             "description": "Tennis - I play tennis regularly and love the sport.", 
             "alt": "Tennis image"},
             {"image": "https://upload.wikimedia.org/wikipedia/commons/e/ec/DnD_Symbolbild.jpg", 
