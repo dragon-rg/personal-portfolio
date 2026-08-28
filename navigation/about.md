@@ -116,8 +116,8 @@ I value my family very much, and I love to spend time with them. Some other hobb
             "description": "Tennis - I play tennis regularly and love the sport.", 
             "alt": "Tennis image"},
             {"image": "https://upload.wikimedia.org/wikipedia/commons/e/ec/DnD_Symbolbild.jpg", 
-            "description": "I love playing dungeons and dragons with my friends",
-            "alt": "Dungeons and Dragons image"},
+            "description": "I am interested in robotics and computer science, competing in FRC and making small personal projects.",
+            "alt": "robotics image"},
             {"image": "{{site.baseurl}}/images/about/Santa_Clarita_ATA_Picture.jpg",
             "description": "Martial Arts - I practice and compete in Taekwondo.",
             "alt": "Martial Arts image"}
