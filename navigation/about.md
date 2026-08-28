@@ -115,7 +115,7 @@ I value my family very much, and I love to spend time with them. Some other hobb
             {"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Tennis_Racket_and_Balls.jpg/960px-Tennis_Racket_and_Balls.jpg", 
             "description": "Tennis - I play tennis regularly and love the sport.", 
             "alt": "Tennis image"},
-            {"image": "https://upload.wikimedia.org/wikipedia/commons/e/ec/DnD_Symbolbild.jpg", 
+            {"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/VEX_Robotics_Competition_Robot_and_Controller.jpg/960px-VEX_Robotics_Competition_Robot_and_Controller.jpg", 
             "description": "Robotics - I am interested in robotics and computer science, competing in FRC, taking CS classes, and making personal projects.",
             "alt": "robotics image"},
             {"image": "{{site.baseurl}}/images/about/Santa_Clarita_ATA_Picture.jpg",
