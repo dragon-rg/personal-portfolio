@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "CTE Expo Early Speaker"
-description: "Extra credit event reflection"
+title: "Sprint 1-2 and Quiz Retrospective"
+description: A retrospective of my computer science journey during Sprints 1 and 2 of of AP CSP
 type: tangibles
 comments: true
 permalink: /retro
@@ -73,5 +73,13 @@ This is a retrospective of my computer science journey during Sprints 1 and 2 of
 
 ## Quiz Retrospective
 > A reflection of my scores on the practice MCQ that we took
+
+On my practice quiz, I scored a 57/66. I missed questions on the following skills:
+- **Skill 1.D:** Evaluate solution options - 77%, 
+- **Skill 3.C:** Explain how abstraction manages complexity - 50%
+- **Skill 5.A:** Explain how computing systems work - 67%
+- **Skill 5.E:** Evaluate the use of computing based on legal and ethical factors - 75%
+
+Some of these skills I didn't have a strong understanding off, and I plan on spending more time learning the basics of these skills to prepare for the CSP exam while also cultivating my full-stack development skills for my group's capstone project.
 
 
