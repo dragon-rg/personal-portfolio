@@ -901,6 +901,10 @@ def process_ui_runner_cells(notebook, permalink):
                 # Store metadata for later use
                 cell['metadata']['ui_runner'] = runner.to_metadata()
                 runner_index += 1
+
+                # Clear outputs for cells with ui-runner (outputs duplicate the injected markup)
+                cell['outputs'] = []
+                cell['execution_count'] = None
         
         processed_cells.append(cell)
     
