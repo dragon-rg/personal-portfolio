@@ -24,6 +24,38 @@
     border-radius: 999px;
 }
 
+.ocs__btn.pill:not(.accent) {
+    background: color-mix(in srgb, var(--pref-text-color) 6%, var(--pref-bg-color));
+    border: 1px solid var(--ui-border);
+    color: var(--pref-accent-color) !important;
+
+    &:hover,
+    &:focus-visible {
+        background: color-mix(in srgb, var(--pref-text-color) 12%, var(--pref-bg-color));
+        border-color: var(--pref-accent-color);
+        color: var(--pref-text-color) !important;
+    }
+}
+
+.ocs__btn.accent {
+    --ocs-btn-tone: var(--pref-accent-color);
+    border-color: var(--pref-accent-color);
+    color: var(--pref-accent-color);
+}
+
+.ocs__btn.accent.fill {
+    background: var(--pref-accent-color);
+    color: var(--pref-bg-color);
+
+    &:hover,
+    &:focus,
+    &:active {
+        background: var(--pref-accent-color);
+        border-color: var(--pref-accent-color);
+        color: var(--pref-bg-color);
+    }
+}
+
 @each $name, $tone in $ocs-alert-buttons {
     .ocs__btn.alert-#{$name} {
         --ocs-btn-tone: #{$tone};
@@ -57,6 +89,7 @@
 // Runner control grammar (shared across CODE/UI/GAME runners)
 // Usage examples:
 // - .ocs__btn.utility.run
+// - .ocs__btn.utility.submit (reflection runner)
 // - .ocs__btn.utility.pause
 // - .ocs__btn.utility.stop
 // - .ocs__btn.utility.fullscreen
@@ -89,6 +122,16 @@
 
     &::before {
         content: '▶';
+    }
+}
+
+.ocs__btn.utility.submit {
+    background: var(--pref-accent-color);
+    border-color: var(--pref-accent-color);
+    color: var(--pref-bg-color);
+
+    &::before {
+        content: '📤';
     }
 }
 

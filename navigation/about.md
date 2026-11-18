@@ -3,7 +3,22 @@ layout: post
 title: About
 permalink: /about/
 comments: true
+gallery_images:
+  - missionary.jpg
+  - john_tamara.jpg
+  - tamara_fam.jpg
+  - surf.jpg
+  - john_lora.jpg
+  - lora_fam.jpg
+  - lora_fam2.jpg
+  - pj_party.jpg
+  - trent_family.png
+  - claire.jpg
+  - grandkids.jpg
+  - farm.jpg
 ---
+
+<!-- markdownlint-disable MD033 -->
 
 ## As a conversation Starter
 
@@ -13,43 +28,8 @@ Here are some places I have lived.
 Flags are made using Wikipedia images i found online
 </comment>
 
-<style>
-    /* Style looks pretty compact, 
-       - grid-container and grid-item are referenced the code 
-    */
-    .grid-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Dynamic columns */
-        gap: 10px;
-    }
-    .grid-item {
-        text-align: center;
-    }
-    .grid-item img {
-        width: 100%;
-        height: 100px; /* Fixed height for uniformity */
-        object-fit: contain; /* Ensure the image fits within the fixed height */
-    }
-    .grid-item p {
-        margin: 5px 0; /* Add some margin for spacing */
-    }
-
-    .image-gallery {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        gap: 10px;
-        }
-
-    .image-gallery img {
-        max-height: 150px;
-        object-fit: cover;
-        border-radius: 5px;
-    }
-</style>
-
-<!-- This grid_container class is used by CSS styling and the id is used by JavaScript connection -->
-<div class="grid-container" id="grid_container">
+<!-- The OCS grid grammar styles the container; JavaScript uses its id to add locations. -->
+<div class="ocs__grid ocs__grid--card" id="grid_container">
     <!-- content will be added here by JavaScript -->
 </div>
 
@@ -65,16 +45,17 @@ Flags are made using Wikipedia images i found online
         {"flag": "1/1a/Flag_of_New_York.svg", "description": "New York - 1.5 year"},
         {"flag": "0/01/Flag_of_California.svg", "description": "California - Returned to the Golden State"},
     ];
-    // 3a. Consider how to update style count for size of container
-    // The grid-template-columns has been defined as dynamic with auto-fill and minmax
+
+    // 3a. The OCS card grid adjusts its columns to the available space.
 
     // 3b. Build grid items inside of our container for each row of data
     for (const location of living_in_the_world) {
-        // Create a "div" with "class grid-item" for each row
+        // Create a grid cell for each location
         var gridItem = document.createElement("div");
-        gridItem.className = "grid-item";  // This class name connects the gridItem to the CSS style elements
+        gridItem.className = "ocs__grid-cell";
         // Add "img" HTML tag for the flag
         var img = document.createElement("img");
+        img.className = "ocs__image-frame ocs__image-frame--thumbnail";
         img.src = http_source + location.flag; // concatenate the source and flag
         img.alt = location.flag + " Flag"; // add alt text for accessibility
 
@@ -142,14 +123,20 @@ I value my family very much, and I love to spend time with them. Some other hobb
 </script>    
 
 <comment>
-Gallery of Pics, scroll to the right for more ...
+Gallery of Pics
 </comment>
-<div class="image-gallery">
-  <img src="{{site.baseurl}}/images/about/Carlsbad_Beach_Solo.jpg" alt="Image 1">
-  <img src="{{site.baseurl}}/images/about/Districts_2025_Solo.jpg" alt="Image 2">
-  <img src="{{site.baseurl}}/images/about/family_singapore.jpg" alt="Image 3">
-  <img src="{{site.baseurl}}/images/about/Riggu_Aksho_Dhoti_function.jpg" alt="Image 4">
-  <img src="{{site.baseurl}}/images/about/shake_shack_singapore.jpg" alt="Image 5">
-  <img src="{{site.baseurl}}/images/about/UniversalStudios_Transformers_Sign.jpg" alt="Image 6">
-  <img src="{{site.baseurl}}/images/about/XMA_Outfit_Headshot.jpg" alt="Image 7">
+{% comment %}
+Assign the one-per-line front matter list for the gallery iteration.
+{% endcomment %}
+{% assign gallery_images = page.gallery_images %}
+<div class="ocs__grid ocs__grid--gallery">
+  {% comment %}
+  Render one OCS thumbnail for each filename in the list.{% endcomment %}
+  {% for image in gallery_images %}
+  <div class="ocs__grid-cell">
+    <div class="ocs__image-frame ocs__image-frame--cover ocs__image-frame--thumbnail">
+      <img src="{{site.baseurl}}/images/about/{{image}}" alt="Image {{forloop.index}}">
+    </div>
+  </div>
+  {% endfor %}
 </div>
